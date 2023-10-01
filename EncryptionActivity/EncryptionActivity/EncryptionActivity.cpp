@@ -1,12 +1,35 @@
-// EncryptionActivity.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/**
+ * File: EncryptionDecryption.cpp
+ * Author: David Allen
+ * Date: 10-01-2023
+ * Version: 2.0 - Updated Header
+ *
+ * Description:
+ * This C++ program demonstrates encryption and decryption of a text file using XOR cipher.
+ * The program reads data from a file, encrypts it, saves the encrypted data to another file,
+ * and then decrypts the encrypted data and saves it to yet another file.
+ *
+ * File Details:
+ * - "EncryptionDecryption.cpp": Main file containing the program logic.
+ *
+ * Included Libraries:
+ * - <iostream>: Input/output operations
+ * - <fstream>: File input/output operations
+ * - <iomanip>: Formatting of input/output
+ * - <sstream>: String stream for parsing
+ * - <ctime>: Date and time functions
+ *
+ * Functions:
+ * - std::string encrypt_decrypt(const std::string& source, const std::string& key):
+ *   XOR-based encryption and decryption function.
+ * - std::string read_file(const std::string& filename): Reads data from a file.
+ * - std::string get_student_name(const std::string& string_data):
+ *   Extracts student name from the data read from the file.
+ * - void save_data_file(const std::string& filename, const std::string& student_name,
+ *   const std::string& key, const std::string& data): Saves data to a file.
+ * - int main(): Main function containing program logic.
+ */
 
-// <summary>
-/// encrypt or decrypt a source string using the provided key
-/// </summary>
-/// <param name="source">input string to process</param>
-/// <param name="key">key to use in encryption / decryption</param>
-/// <returns>transformed string</returns>
 #include <cassert>
 #include <fstream>
 #include <iomanip>
